@@ -5,6 +5,7 @@ module Magic
       cost white: 1
       power 1
       toughness 1
+      keywords :lifelink
     end
 
     class AnointedChorister < Creature

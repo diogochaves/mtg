@@ -5,6 +5,7 @@ module Magic
       type "Creature -- Griffin"
       power 3
       toughness 2
+      keywords :flying
     end
 
     class GaleSwooper < Creature

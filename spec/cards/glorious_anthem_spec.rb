@@ -11,6 +11,8 @@ RSpec.describe Magic::Cards::GloriousAnthem do
     it "creature gets buffed" do
       expect(wood_elves.power).to eq(2)
       expect(wood_elves.toughness).to eq(2)
+      expect(wood_elves_2.power).to eq(2)
+      expect(wood_elves_2.toughness).to eq(2)
     end
   end
 
@@ -21,6 +23,8 @@ RSpec.describe Magic::Cards::GloriousAnthem do
         expect(game.battlefield.static_abilities.count).to eq(0)
         expect(wood_elves.power).to eq(1)
         expect(wood_elves.toughness).to eq(1)
+        expect(wood_elves_2.power).to eq(1)
+        expect(wood_elves_2.toughness).to eq(1)
       end
     end
   end
