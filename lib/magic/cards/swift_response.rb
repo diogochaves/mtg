@@ -1,12 +1,12 @@
 module Magic
   module Cards
-    LegionsJudgement = Sorcery("Legion's Judgement") do
-      cost generic: 2, white: 1
+    SwiftResponse = Instant("Swift Response") do
+      cost generic: 1, white: 1
     end
 
-    class LegionsJudgement < Sorcery
+    class SwiftResponse < Instant
       def target_choices
-        battlefield.creatures.with_power { |power| power >= 4 }
+        battlefield.creatures
       end
 
       def single_target?

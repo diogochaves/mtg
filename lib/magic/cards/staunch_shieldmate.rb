@@ -7,4 +7,4 @@ module Magic
       toughness 3
     end
   end
-  end
+end

@@ -1,16 +1,16 @@
 module Magic
   module Cards
-    SelflessSavior = Creature("Selfless Savior") do
-      type "Creature -- Dog"
-      cost white: 1
-      power 1
+    KeenGlidemaster = Creature("Keen Glidemaster") do
+      type "Creature — Human Soldier"
+      cost generic: 1, blue: 1
+      power 2
       toughness 1
     end
 
-    class SelflessSavior < Creature
+    class KeenGlidemaster < Creature
       class ActivatedAbility < Magic::ActivatedAbility
         def costs
-          [Costs::Sacrifice.new(source)]
+          [Costs::Mana.new(generic: 2, blue: 1)]
         end
 
         def single_target?
@@ -18,11 +18,11 @@ module Magic
         end
 
         def target_choices
-          source.controller.creatures
+          battlefield.creatures
         end
 
         def resolve!(target:)
-          target.grant_keyword(Keywords::INDESTRUCTIBLE, until_eot: true)
+          target.grant_keyword(Keywords::FLYING, until_eot: true)
         end
       end
 

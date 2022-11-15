@@ -1,11 +1,10 @@
 module Magic
   module Cards
     RambunctiousMutt = Creature("Rambunctious Mutt") do
-      cost generic: 3, green: 2
+      cost generic: 3, white: 2
       type "Creature -- Dog"
-      keywords :deathtouch
-      power 2
-      toughness 2
+      power 3
+      toughness 4
     end
 
     class RambunctiousMutt < Creature

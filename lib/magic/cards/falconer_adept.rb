@@ -17,7 +17,6 @@ module Magic
           end
         }
       end
-
     end
   end
 end

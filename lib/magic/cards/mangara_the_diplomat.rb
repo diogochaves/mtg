@@ -20,6 +20,7 @@ module Magic
 
             controller.draw! if incoming_attacks.count >= 2
           end,
+          # Whenever an opponent casts their second spell each turn, draw a card.
           Events::SpellCast => -> (receiver, event) do
             spells_cast_by_player = current_turn.spells_cast.count { |spell| spell.player == event.player }
             receiver.controller.draw! if spells_cast_by_player == 2

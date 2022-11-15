@@ -1,7 +1,7 @@
 module Magic
   module Cards
     SecureTheScene = Sorcery("Secure the Scene") do
-      cost white: 1, generic: 4
+      cost generic: 4, white: 1
     end
 
     class SecureTheScene < Sorcery
