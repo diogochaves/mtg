@@ -1,7 +1,7 @@
 module Magic
   module Cards
     LibraryLarcenist = Creature("Library Larcenist") do
-      type "Creature — Merfolk Rogue"
+      type "Creature -- Merfolk Rogue"
       cost generic: 2, blue: 1
       power 1
       toughness 2

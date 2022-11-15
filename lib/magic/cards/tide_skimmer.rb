@@ -1,7 +1,7 @@
 module Magic
   module Cards
     TideSkimmer = Creature("Tide Skimmer") do
-      type "Creature — Drakee"
+      type "Creature -- Drakee"
       cost generic: 3, blue: 1
       power 2
       toughness 3

@@ -1,7 +1,7 @@
 module Magic
   module Cards
     KeenGlidemaster = Creature("Keen Glidemaster") do
-      type "Creature — Human Soldier"
+      type "Creature -- Human Soldier"
       cost generic: 1, blue: 1
       power 2
       toughness 1
