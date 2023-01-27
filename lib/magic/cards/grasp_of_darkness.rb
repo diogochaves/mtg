@@ -1,10 +1,10 @@
 module Magic
   module Cards
-    SureStrike = Instant("Sure Strike") do
-      cost generic: 1, red: 1
+    GraspOfDarkness = Instant("Grasp of Darkness") do
+      cost black: 2
     end
 
-    class SureStrike < Instant
+    class GraspOfDarkness < Instant
       def target_choices
         battlefield.creatures
       end
@@ -15,8 +15,7 @@ module Magic
 
       def resolve!(controller, target:)
         if target.zone == battlefield
-          game.add_effect(Effects::ApplyBuff.new(source: self, power: 3, targets: target))
-          target.grant_keyword(Keywords::FIRST_STRIKE, until_eot: true)
+          game.add_effect(Effects::ApplyBuff.new(source: self, power: -4, toughness: -4, targets: target))
         end
 
         super

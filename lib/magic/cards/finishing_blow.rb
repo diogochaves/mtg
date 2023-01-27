@@ -1,12 +1,12 @@
 module Magic
   module Cards
-    Mortify = Instant("Mortify") do
-      cost generic: 1, white: 1, black: 1
+    FinishingBlow = Instant("Finishing Blow") do
+      cost generic: 4, black: 1
     end
 
-    class Mortify < Instant
+    class FinishingBlow < Instant
       def target_choices
-        battlefield.cards.by_any_type("Creature", "Enchantment")
+        battlefield.cards.by_any_type("Creature", "Planeswalker")
       end
 
       def single_target?

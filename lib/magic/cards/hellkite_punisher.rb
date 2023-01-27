@@ -4,14 +4,11 @@ module Magic
       type "Creature -- Dragon"
       power 6
       toughness 6
-
       keywords :flying
     end
 
     class HellkitePunisher < Creature
       class ActivatedAbility < Magic::ActivatedAbility
-        attr_reader
-
         def costs
           [Costs::Mana.new(red: 1)]
         end

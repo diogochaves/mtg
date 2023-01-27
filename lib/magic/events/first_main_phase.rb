@@ -2,7 +2,7 @@ module Magic
   module Events
     class FirstMainPhase
       def inspect
-        "#<Events::DrawStep>"
+        "#<Events::FirstMainPhase>"
       end
     end
   end
